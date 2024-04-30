@@ -1,0 +1,30 @@
+<div ng-controller="SignUpController" class="container bg-info" >
+    <form novalidate>
+        <div class="form-group text-info">
+          <label for="first_name">First name</label>
+          <input type="text" class="form-control" id="first_name" placeholder="Enter First Name" ng-model="first_name" required>
+          <small ng-show="first_name_error" class="text-danger">{{first_name_error}}</small>
+        </div>
+        <div class="form-group text-info">
+            <label for="last_name">Last name</label>
+            <input type="text" class="form-control" id="last_name" placeholder="Enter Last name" ng-model="last_name" required>
+            <small ng-show="last_name_error" class="text-danger">{{last_name_error}}</small>
+        </div>
+        <div class="form-group text-info">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter Email" ng-model="email" required>
+            <small ng-show="email_error" class="text-danger">{{email_error}}</small>
+        </div>
+        <div class="form-group text-info">
+            <label for="address">Address</label>
+            <input type="text" class="form-control" id="address" placeholder="Enter Address" ng-model="address" required>
+            <small ng-show="address_error" class="text-danger">{{address_error}}</small>
+        </div>
+        <div class="form-group text-info">
+            <label for="favorite_dish_short_name">Favorite dish (menu number)</label>
+            <input type="text" class="form-control" id="favorite_dish_short_name" placeholder="Enter Favorite dish" ng-model="favorite_dish_short_name" required>
+            <small ng-if="favorite_dish_short_name_error" class="text-danger">{{favorite_dish_short_name_error}}</small>
+        </div>
+        <button class="btn btn-primary" ng-click="onSubmit()">Submit</button>
+    </form>
+</div>

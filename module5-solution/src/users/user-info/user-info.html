@@ -1,0 +1,27 @@
+<div class="container" ng-if="userInfoCtrl.userInfo.first_name">
+    <div class="col-12">
+        First Name: {{userInfoCtrl.userInfo.first_name}}
+    </div>
+    <div class="col-12">
+        Last name: {{userInfoCtrl.userInfo.last_name}}
+    </div>
+    <div class="col-12">
+        Email: {{userInfoCtrl.userInfo.email}}
+    </div>
+    <div class="col-12">
+        Address: {{userInfoCtrl.userInfo.address}}
+    </div>
+    <div class="col-12" ng-if="userInfoCtrl.name">
+        Favorite dish: {{userInfoCtrl.userInfo.favorite_dish_short_name}}
+        {{userInfoCtrl.name}}
+        <img class="img-responsive" width="250" height="150" ng-src="{{userInfoCtrl.urlImg}}">
+        {{userInfoCtrl.description}}
+    </div>
+    <div class="col-12" ng-if="!userInfoCtrl.name">
+        Favorite dish: No such menu number exists
+    </div>
+</div>
+<div class="container" ng-if="!userInfoCtrl.userInfo.first_name">
+    Not Signed Up Yet.
+    <a ui-sref="signup">Sign up Now!</a>
+</div>
